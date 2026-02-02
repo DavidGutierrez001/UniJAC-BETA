@@ -1,210 +1,244 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!doctype html>
+<html lang="es" data-theme="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>UniJAC | Tu comunidad en un solo lugar</title>
+    <title>UniJAC | Tu comunidad en un solo lugar</title>
 
-  <meta name="description" content="Descubre eventos, novedades y participa activamente en tu comunidad con UniJAC." />
+    <meta
+      name="description"
+      content="Descubre eventos, novedades y participa activamente en tu comunidad con UniJAC."
+    />
 
-  <!-- Modo Black -->
-  <!-- <meta name="color-scheme" content="light dark" /> -->
-</head>
-<body>
-  <!-- ================= HEADER ================= -->
-  <header role="banner">
-    <nav aria-label="Navegación principal">
-      <div class="nav-container">
-        <a href="/" aria-label="Inicio UniJAC">
-          <img src="assets/img/logo-dark.svg" alt="UniJAC" />
-        </a>
+    <!-- Modo Black -->
+    <!-- <meta name="color-scheme" content="light dark" /> -->
 
-        <ul>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header" role="banner">
+      <a href="/" class="logo-container" aria-label="Inicio UniJAC">
+        <img
+          src="assets/img/logo-light.svg"
+          class="logo-dark"
+          alt="logo UniJAC"
+        />
+      </a>
+
+      <nav class="nav-container" aria-label="Navegación principal">
+        <ul class="list-container">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
           <li><a href="./pages/neighborhoods.html">Barrios</a></li>
         </ul>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <!-- ================= MAIN ================= -->
-  <main id="contenido-principal">
+    <!-- ================= MAIN ================= -->
+    <main id="contenido-principal">
+      <!-- ========== HERO / BUSCADOR ========== -->
+      <section class="hero-content" id="inicio" aria-labelledby="titulo-hero">
+        <video
+          src="assets/videos/fondo.mp4"
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+        <div class="hero-group">
+          <h1 class="title-hero" id="titulo-hero">
+            Descubre todo lo que pasa en tu comunidad en un solo lugar.
+          </h1>
 
-    <!-- ========== HERO / BUSCADOR ========== -->
-    <section id="inicio" aria-labelledby="titulo-hero">
-      <div class="hero-content">
+          <form role="search" class="form-content" aria-label="Buscar barrio">
+            <label for="buscar-barrio" class="sr-only"> Buscar barrio </label>
+            <div class="search-content">
+              <input
+                type="search"
+                class="search-input"
+                id="buscar-barrio"
+                name="barrio"
+                placeholder="Encuentra tu barrio"
+                aria-required="true"
+              />
 
-        <h1 id="titulo-hero">
-          Descubre todo lo que pasa en tu comunidad en un solo lugar.
-        </h1>
-
-        <form role="search" aria-label="Buscar barrio">
-          <label for="buscar-barrio" class="visually-hidden">
-            Buscar barrio
-          </label>
-
-          <input
-            type="search"
-            id="buscar-barrio"
-            name="barrio"
-            placeholder="Encuentra tu barrio"
-            aria-required="true"
-          />
-
-          <button type="submit">
-            Buscar
-          </button>
-        </form>
-
-      </div>
-    </section>
-
-    <!-- ========== SECCIÓN: CONECTA, COMPARTE, AYÚDATE ========== -->
-    <section aria-labelledby="titulo-conecta">
-      <div class="section-content">
-
-        <div class="text-content">
-          <h2 id="titulo-conecta">
-            Conecta, Comparte. Ayúdate
-          </h2>
-
-          <p>
-            Mantente enterado de la información de tus vecinos y construye
-            una comunidad entre todos.
-          </p>
+              <button
+                class="button-search"
+                aria-label="buscar"
+                type="submit"
+                disabled
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#ffff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.796 15.811 21 21m-3-10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
 
-        <figure>
+        <a class="btn-conecta" href="#first-section">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="-0.5 0 25 25"
+          >
+            <g
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 22.4199c5.5228 0 10-4.4771 10-10 0-5.52283-4.4772-9.99998-10-9.99998-5.52285 0-10 4.47715-10 9.99998 0 5.5229 4.47715 10 10 10Z"
+              />
+              <path
+                d="m16 10.99-2.87 3.06c-.1442.1558-.319.2798-.5134.3648-.1945.085-.4044.1289-.6166.1289-.2122 0-.4221-.0439-.6166-.1289-.1944-.085-.3692-.209-.5134-.3648L8 10.99"
+              />
+            </g>
+          </svg>
+          <span class="sr-only">bajar</span>
+        </a>
+      </section>
+
+      <!-- ========== SECCIÓN: CONECTA, COMPARTE, AYÚDATE ========== -->
+      <section
+        class="section-content"
+        id="first-section"
+        aria-labelledby="titulo-conecta"
+      >
+        <div class="first-content">
+          <div class="text-content">
+            <h2 class="title-conecta">Conecta, Comparte. Ayúdate</h2>
+            <p class="subtitle-conecta">
+              Mantente enterado de la información de tus vecinos y construye una
+              comunidad entre todos.
+            </p>
+          </div>
+
           <img
             src="assets/img/persona-usando-celular.avif"
             alt="Persona mayor usando su celular para informarse"
           />
-        </figure>
+        </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- ========== SECCIÓN: PARTICIPACIÓN COMUNITARIA ========== -->
+      <section class="section-content" aria-labelledby="titulo-participacion">
+        <div class="second-content">
+          <!--   <img
+                src="assets/img/planta-comunidad.avif"
+                alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
+              /> -->
 
-    <!-- ========== SECCIÓN: PARTICIPACIÓN COMUNITARIA ========== -->
-    <section aria-labelledby="titulo-participacion">
-      <div class="section-content">
+          <div class="text-content">
+            <h3 id="titulo-participacion">
+              Se acabaron las excusas para no participar en tu barrio.
+            </h3>
 
-        <figure>
-          <img
-            src="assets/img/planta-comunidad.avif"
-            alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
-          />
-        </figure>
+            <p>
+              Invita a tus vecinos a descubrir todos los eventos disponibles que
+              la comunidad no conoce.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <!-- ========== SECCIÓN: REPORTES COMUNITARIOS ========== -->
+      <section class="section-content" aria-labelledby="titulo-reportes">
         <div class="text-content">
-          <h2 id="titulo-participacion">
-            Se acabaron las excusas para no participar en tu barrio.
-          </h2>
+          <h4 id="titulo-reportes">Ellos también necesitan a la comunidad.</h4>
 
           <p>
-            Invita a tus vecinos a descubrir todos los eventos disponibles
-            que la comunidad no conoce.
+            Ayuda reportando cualquier tipo de novedad que encuentres en tu
+            zona, tus vecinos te lo agradecerán.
           </p>
         </div>
 
-      </div>
-    </section>
+        <!-- <img
+          src="assets/img/perro-comunidad.png"
+          alt="Perro sosteniendo un plato, símbolo de ayuda comunitaria"
+        /> -->
+        <!-- <img src="assets/img/ave-comunidad.png" alt="Ave comunitaria" /> -->
+      </section>
 
-    <!-- ========== SECCIÓN: REPORTES COMUNITARIOS ========== -->
-    <section aria-labelledby="titulo-reportes">
-      <div class="section-content">
-
+      <!-- ========== SECCIÓN: ADMINISTRACIÓN COMUNITARIA ========== -->
+      <section class="section-content" aria-labelledby="titulo-administracion">
         <div class="text-content">
-          <h2 id="titulo-reportes">
-            Ellos también necesitan a la comunidad.
+          <h2 id="titulo-administracion">
+            Administra la sostenibilidad de la comunidad.
           </h2>
 
           <p>
-            Ayuda reportando cualquier tipo de novedad que encuentres en tu zona,
-            tus vecinos te lo agradecerán.
+            Ser parte de la JAC es ser la voz de la gente y la unión que busca
+            el fortalecimiento y la dignidad del pueblo.
           </p>
         </div>
 
-        <figure>
-          <img
-            src="assets/img/perro-comunidad.png"
-            alt="Perro sosteniendo un plato, símbolo de ayuda comunitaria"
-          />
-          <img
-            src="assets/img/ave-comunidad.png"
-            alt="Ave comunitaria"
-          />
-        </figure>
-
-      </div>
-    </section>
-
-    <!-- ========== SECCIÓN: ADMINISTRACIÓN COMUNITARIA ========== -->
-    <section aria-labelledby="titulo-administracion">
-      <div class="section-content">
-
-        <h2 id="titulo-administracion">
-          Administra la sostenibilidad de la comunidad.
-        </h2>
-
-        <p>
-          Ser parte de la JAC es ser la voz de la gente y la unión que busca
-          el fortalecimiento y la dignidad del pueblo.
-        </p>
-
-        <figure>
-          <img
+        <!-- <img
             src="./assets/img/personas-comunidad.avif"
             alt="Grupo diverso de personas abrazadas representando unión comunitaria"
-          />
-        </figure>
+          /> -->
+      </section>
+    </main>
 
+    <!-- ================= FOOTER ================= -->
+    <footer role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <strong>UniJAC</strong>
+          <p>
+            Plataforma digital para fortalecer la comunicación y participación
+            comunitaria.
+          </p>
+
+          <ul aria-label="Redes sociales">
+            <li><a href="#" aria-label="Instagram UniJAC">Instagram</a></li>
+            <li><a href="#" aria-label="LinkedIn UniJAC">LinkedIn</a></li>
+            <li><a href="#" aria-label="X UniJAC">X</a></li>
+          </ul>
+        </div>
+
+        <nav aria-label="Enlaces del sitio">
+          <ul>
+            <li><strong>Features</strong></li>
+            <li><a href="#">Core features</a></li>
+            <li><a href="#">Pro experience</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Learn more</strong></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case studies</a></li>
+            <li><a href="#">Customer stories</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Support</strong></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer role="contentinfo">
-    <div class="footer-container">
-
-      <div class="footer-brand">
-        <strong>UniJAC</strong>
-        <p>
-          Plataforma digital para fortalecer la comunicación y participación comunitaria.
-        </p>
-
-        <ul aria-label="Redes sociales">
-          <li><a href="#" aria-label="Instagram UniJAC">Instagram</a></li>
-          <li><a href="#" aria-label="LinkedIn UniJAC">LinkedIn</a></li>
-          <li><a href="#" aria-label="X UniJAC">X</a></li>
-        </ul>
-      </div>
-
-      <nav aria-label="Enlaces del sitio">
-        <ul>
-          <li><strong>Features</strong></li>
-          <li><a href="#">Core features</a></li>
-          <li><a href="#">Pro experience</a></li>
-          <li><a href="#">Integrations</a></li>
-        </ul>
-
-        <ul>
-          <li><strong>Learn more</strong></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Case studies</a></li>
-          <li><a href="#">Customer stories</a></li>
-        </ul>
-
-        <ul>
-          <li><strong>Support</strong></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Legal</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
