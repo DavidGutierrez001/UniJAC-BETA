@@ -58,43 +58,42 @@
           <h1 class="title-hero" id="titulo-hero">
             Descubre todo lo que pasa en tu comunidad en un solo lugar.
           </h1>
-
           <form role="search" class="form-content" aria-label="Buscar barrio">
-            <label for="buscar-barrio" class="sr-only"> Buscar barrio </label>
             <div class="search-content">
+              <label for="buscar-barrio" class="label-search">
+                Encuentra tu barrio
+              </label>
               <input
                 type="search"
                 class="search-input"
                 id="buscar-barrio"
                 name="barrio"
-                placeholder="Encuentra tu barrio"
                 aria-required="true"
+                placeholder=""
               />
-
-              <button
-                class="button-search"
-                aria-label="buscar"
-                type="submit"
-                disabled
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#ffff"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15.796 15.811 21 21m-3-10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
-                  />
-                </svg>
-              </button>
             </div>
+            <button
+              class="button-search"
+              aria-label="buscar"
+              type="submit"
+              disabled
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#ffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.796 15.811 21 21m-3-10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                />
+              </svg>
+            </button>
           </form>
         </div>
-
         <a class="btn-conecta" href="#first-section">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +114,7 @@
               />
             </g>
           </svg>
-          <span class="sr-only">bajar</span>
+          <span class="sr-only">deslizar abajo</span>
         </a>
       </section>
 
@@ -144,13 +143,13 @@
       <!-- ========== SECCIÓN: PARTICIPACIÓN COMUNITARIA ========== -->
       <section class="section-content" aria-labelledby="titulo-participacion">
         <div class="second-content">
-          <!--   <img
-                src="assets/img/planta-comunidad.avif"
-                alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
-              /> -->
+          <img
+            src="assets/img/planta-comunidad.avif"
+            alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
+          />
 
           <div class="text-content">
-            <h3 id="titulo-participacion">
+            <h3 class="title-participacion">
               Se acabaron las excusas para no participar en tu barrio.
             </h3>
 
@@ -173,11 +172,12 @@
           </p>
         </div>
 
-        <!-- <img
+        <img
           src="assets/img/perro-comunidad.png"
           alt="Perro sosteniendo un plato, símbolo de ayuda comunitaria"
-        /> -->
-        <!-- <img src="assets/img/ave-comunidad.png" alt="Ave comunitaria" /> -->
+          hidden
+        />
+        <img hidden src="assets/img/ave-comunidad.png" alt="Ave comunitaria" />
       </section>
 
       <!-- ========== SECCIÓN: ADMINISTRACIÓN COMUNITARIA ========== -->
@@ -193,10 +193,11 @@
           </p>
         </div>
 
-        <!-- <img
-            src="./assets/img/personas-comunidad.avif"
-            alt="Grupo diverso de personas abrazadas representando unión comunitaria"
-          /> -->
+        <img
+          hidden
+          src="./assets/img/personas-comunidad.avif"
+          alt="Grupo diverso de personas abrazadas representando unión comunitaria"
+        />
       </section>
     </main>
 
