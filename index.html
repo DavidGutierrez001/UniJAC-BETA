@@ -14,6 +14,8 @@
     <!-- Modo Black -->
     <!-- <meta name="color-scheme" content="light dark" /> -->
 
+    <link rel="shortcun icon" href="/assets//img/logo-light.svg" />
+
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,9 +60,9 @@
           <h1 class="title-hero" id="titulo-hero">
             Descubre todo lo que pasa en tu comunidad en un solo lugar.
           </h1>
-          <form role="search" class="form-content" aria-label="Buscar barrio">
+          <form role="search" class="form-content" aria-label="Buscar barrio" method="" action="/pages/neighborhoods.html">
             <div class="search-content">
-              <label for="buscar-barrio" class="label-search">
+              <label for="buscar-barrio" class="search-label">
                 Encuentra tu barrio
               </label>
               <input
@@ -76,7 +78,6 @@
               class="button-search"
               aria-label="buscar"
               type="submit"
-              disabled
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,27 +127,32 @@
       >
         <div class="first-content">
           <div class="text-content">
-            <h2 class="title-conecta">Conecta, Comparte. Ayúdate</h2>
-            <p class="subtitle-conecta">
+            <h2 class="title">Encuentra, Participa y Comparte.</h2>
+            <p class="subtitle">
               Mantente enterado de la información de tus vecinos y construye una
               comunidad entre todos.
             </p>
           </div>
 
-          <img
-            src="assets/img/persona-usando-celular.avif"
-            alt="Persona mayor usando su celular para informarse"
-          />
+          <figure class="image-content">
+            <img
+              src="assets/img/persona-usando-celular.png"
+              alt="Persona mayor usando su celular para informarse"
+            />
+          </figure>
         </div>
       </section>
 
       <!-- ========== SECCIÓN: PARTICIPACIÓN COMUNITARIA ========== -->
       <section class="section-content" aria-labelledby="titulo-participacion">
         <div class="second-content">
-          <img
-            src="assets/img/planta-comunidad.avif"
-            alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
-          />
+          <figure class="image-content">
+            <img
+              hidden
+              src="assets/img/planta-comunidad.avif"
+              alt="Manos sosteniendo una planta como símbolo de crecimiento comunitario"
+            />
+          </figure>
 
           <div class="text-content">
             <h3 class="title-participacion">
