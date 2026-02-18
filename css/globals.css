@@ -1,16 +1,20 @@
 :root {
   /* PALETA DE COLORES */
   --text-primary: rgb(34, 34, 34);
-  --text-secondary: rgb(159, 159, 159);
+  --text-secondary: rgb(92, 94, 98);
 
   --background-primary: rgb(255, 255, 255);
   --background-secondary: rgb(250, 250, 250);
   --background-tertiary: rgb(245, 245, 245);
 
+  --background-input: rgb(247, 247, 247);
+  --background-input-border: rgb(229, 229, 229);
+
   --border: rgb(227, 227, 227);
   --border-hover: rgb(210, 210, 210);
   --border-focus: rgb(180, 180, 180);
-
+  --border-input: rgb(229, 229, 229);
+  --border-input-focus: rgb(180, 180, 180);
   --icon: rgb(27, 27, 27);
 }
 
@@ -32,6 +36,24 @@
   --icon: rgb(167, 167, 167);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+  background: var(--background-primary);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 350px;
+}
+
 /* FORMATEO DE ESTILOS */
 h1,
 h2,
@@ -42,7 +64,8 @@ a,
 ul,
 ol,
 figure,
-input {
+input,
+fieldset {
   margin: 0;
   padding: 0;
   color: var(--text-primary);
@@ -58,10 +81,14 @@ button {
   cursor: pointer;
   background: var(--background-secondary);
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 5px;
   min-width: 3rem;
   display: flex;
   align-items: center;
+}
+
+input {
+  box-shadow: 0 2px 4px #00000010;
 }
 
 svg {
@@ -82,19 +109,9 @@ svg {
   fill: var(--text-primary);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  color: var(--text-primary);
-  background: var(--background-primary);
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: red solid;
 }
