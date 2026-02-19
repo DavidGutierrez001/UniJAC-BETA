@@ -10,7 +10,6 @@
   --background-input: rgb(247, 247, 247);
   --background-input-border: rgb(229, 229, 229);
 
-  --border: rgb(227, 227, 227);
   --border-hover: rgb(210, 210, 210);
   --border-focus: rgb(180, 180, 180);
   --border-input: rgb(229, 229, 229);
@@ -51,7 +50,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 /* FORMATEO DE ESTILOS */
@@ -87,7 +86,8 @@ button {
   align-items: center;
 }
 
-input {
+input,
+select {
   box-shadow: 0 2px 4px #00000010;
 }
 
@@ -110,8 +110,8 @@ svg {
 }
 
 .not-found {
+  min-height: calc(100vh - 4rem);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: red solid;
 }
