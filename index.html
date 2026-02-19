@@ -10,6 +10,13 @@
       content="Descubre eventos, novedades y participa activamente en tu comunidad con UniJAC."
     />
 
+    <link rel="icon" href="./assets/img/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
@@ -57,17 +64,14 @@
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="32"
-          width="32"
           viewBox="0 0 24 24"
         >
           <path
             fill="none"
-            stroke="#000"
+            stroke="#fff"
             stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 5h16M4 12h16M4 19h16"
+            stroke-width="1"
+            d="M5 7h14M5 12h14M5 17h14"
           />
         </svg>
       </button>
@@ -79,14 +83,14 @@
       >
         <ul class="list-container">
           <li><a href="#/home">Inicio</a></li>
-          <li><a aria-disabled="true" href="/">Sobre nosotros</a></li>
-          <li><a aria-disabled="true" href="/">Contactos</a></li>
+          <li><a aria-disabled="true" href="#/nosotros">Sobre nosotros</a></li>
+          <li><a aria-disabled="true" href="#/contactos">Contactos</a></li>
         </ul>
       </nav>
 
       <div class="btn-container">
         <a class="btn-register" id="btnRegister" href="#/register"
-          >Crear cuenta</a
+          >Registrarse</a
         >
       </div>
     </header>
@@ -118,25 +122,6 @@
           <div class="buttons-content">
             <a class="button-register" href="#/register">
               Comienza ahora
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-width="1.5"
-                >
-                  <path d="M16.5 7.5L6 18" />
-                  <path
-                    stroke-linejoin="round"
-                    d="M8 6.188s8.048-.679 9.27.543c1.22 1.221.542 9.269.542 9.269"
-                  />
-                </g>
-              </svg>
             </a>
             <a class="button-login" href="#/login">Iniciar sesión</a>
           </div>
@@ -275,6 +260,7 @@
         </nav>
       </div>
     </footer> -->
-    <script src="./js/index.js" defer></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/routes.js" defer></script>
   </body>
 </html>
