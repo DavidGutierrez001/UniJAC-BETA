@@ -29,7 +29,6 @@
       </button>
     </div>
     <div class="steps-content">
-      
       <!-- PASO 1 -->
       <fieldset
         id="step1Content"
@@ -38,11 +37,21 @@
       >
         <div class="form-group">
           <label for="localidad">Localidad</label>
-          <select name="localidad" id="localidad" required>
-            <option selected disabled hidden>Selecciona tu localidad</option>
-            <option value="9">Fontibón</option>
-            <option value="10">Engativá</option>
-            <option value="11">Suba</option>
+          <select name="localidad" id="localidad" aria-live="polite" required>
+            <option selected disabled hidden>Selecciona localidad</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="barrios">Barrio</label>
+          <select
+            name="barrios"
+            id="barrios"
+            aria-live="polite"
+            required
+            disabled
+          >
+            <option selected disabled hidden>Selecciona barrio</option>
           </select>
         </div>
 
@@ -55,8 +64,6 @@
           <label for="apellido">Apellido</label>
           <input type="text" name="apellido" id="apellido" required />
         </div>
-
-        <div class="h-captcha"></div>
 
         <p class="terms">
           Al continuar, aceptas el uso de cookies y la política de privacidad al
@@ -90,7 +97,7 @@
           <input type="password" name="password" id="password" required />
         </div>
 
-        <a href="./pages/neighborhoods.html" class="next-step" type="submit"
+        <a href="/pages/dashboard/summary.html" class="next-step" type="submit"
           >Crear cuenta</a
         >
       </fieldset>
