@@ -387,8 +387,9 @@ body {
         .title-hero {
           font-weight: 600;
           letter-spacing: 1;
-          line-height: 1;
+          line-height: 1.1;
           color: var(--text);
+          min-height: clamp(3rem, 11vw, 4.5rem);
           font-size: clamp(2.8rem, 10vw, 4rem);
           cursor: default;
         }
