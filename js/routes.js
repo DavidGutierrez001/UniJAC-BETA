@@ -14,16 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // INICIAR VISTA INICIAL
     const initHome = () => {
         // LAZY LOADING
-        const sections = document.querySelectorAll(".occult");
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("reveal");
-                }
-            });
-        }, { rootMargin: "1px" });
-        sections.forEach((section) => observer.observe(section));
-
         const images = document.querySelectorAll('[data-src]');
         const options = { rootMargin: "200px" };
         const callBack = (entries, self) => {
