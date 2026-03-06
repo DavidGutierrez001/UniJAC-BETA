@@ -1,149 +1,92 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- TABLA DE REPORTES -->
+<section class="main-infrastucture" aria-labelledby="tabla-reportes">
+  <h2 class="title-report" id="tabla-reportes">Reportes de infraestructura</h2>
 
-  <title>UniJAC | Tu comunidad en un solo lugar</title>
+  <div
+    class="content-reports"
+    role="region"
+    aria-labelledby="tabla-reportes"
+    tabindex="0"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre del caso</th>
+          <th scope="col">Fecha de reporte</th>
+          <th scope="col">Gravedad del caso</th>
+          <th scope="col">Estado del caso</th>
+          <th scope="col">Evidencia</th>
+        </tr>
+      </thead>
 
-  <meta name="description" content="Descubre eventos, novedades y participa activamente en tu comunidad con UniJAC." />
-
-  <!-- Modo Black -->
-  <!-- <meta name="color-scheme" content="light dark" /> -->
-</head>
-
-<body>
-  <!-- ================= HEADER ================= -->
-  <header>
-      <nav aria-label="Navegación principal">
-          <ul>
-              <li><strong>UniJAC</strong></li>
-              <li><a href="./eventsandactivities.html">Eventos y actividades</a></li>
-              <li><a href="./infrastructure.html">Daños de infraestructura</a></li>
-              <li><a href="#">Seguridad y convivencia</a></li>
-              <li><a href="./disorientation.html">Desorientación y objetos</a></li>
-              <li><a href="./sanitation.html">Aseo, basuras y puntos críticos</a></li>
-          </ul>
-      </nav>
-  </header>
-
-  <main>
-
-    <!-- BREADCRUMB -->
-    <nav aria-label="Ruta de navegación">
-      <ol class="breadcrumb">
-        <li>
-          <a href="../index.html">Página principal</a>
-        </li>
-        <li>
-          <a href="./neighborhoods.html">Barrio</a>
-        </li>
-        <li aria-current="page">
-          Daños de infraestructura
-        </li>
-      </ol>
-    </nav>
-
-    <h1>Daños de infraestructura</h1>
-
-    <div class="grid">
-
-      <!-- TABLA DE REPORTES -->
-    <section aria-labelledby="tabla-reportes">
-      <h2 id="tabla-reportes">Casos reportados</h2>
-
-      <div role="region" aria-labelledby="tabla-reportes" tabindex="0">
-        <table>
-          <caption class="muted">
-            Listado de casos de infraestructura y convivencia reportados por la comunidad
-          </caption>
-
-          <thead>
-            <tr>
-              <th scope="col">Evidencia</th>
-              <th scope="col">Fecha de reporte</th>
-              <th scope="col">Nombre del caso</th>
-              <th scope="col">Gravedad del caso</th>
-              <th scope="col">Estado del caso</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <!-- FILA CON DATOS -->
-            <tr>
-              <td>
-                <a href="#" aria-label="Ver adjunto del caso Deterioro vial">
-                  Adjunto
-                </a>
-              </td>
-              <td>
-                <time datetime="2026-01-05">Enero 5, 2026</time>
-              </td>
-              <td>
-                Deterioro vial
-              </td>
-              <td>
-                <span aria-label="Gravedad moderada">Moderado</span>
-              </td>
-              <td>
-                <span aria-label="Estado pendiente">Pendiente</span>
-              </td>
-            </tr>
-
-            <!-- FILAS VACÍAS / PRÓXIMAMENTE -->
-            <tr>
-              <td colspan="5" class="muted">
-                Próximamente más reportes…
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="5" class="muted">
-                —
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-      <!-- COLUMNA LATERAL -->
-      <aside aria-label="Información complementaria">
-
-        <section aria-labelledby="horarios">
-          <h2 id="horarios">Horarios importantes</h2>
-          <p><strong>Recolección de basura</strong></p>
-          <ul>
-            <li>Lunes</li>
-            <li>Miércoles</li>
-            <li>Jueves</li>
-          </ul>
-          <p>Hora aproximada: 8:00 – 9:00 PM</p>
-          <a href="#">Ver más</a>
-        </section>
-
-        <section aria-labelledby="eventos">
-          <h2 id="eventos">Eventos y actividades disponibles</h2>
-
-          <article class="card">
-            <h3>Rumba terapia</h3>
-            <p>Alcaldía del barrio</p>
-            <p>
-              <time datetime="2026-03-14T07:00">14/03/2026 – 7:00 AM</time>
-            </p>
-          </article>
-
-          <a href="#">Ver más</a>
-        </section>
-
-        <section aria-labelledby="noticias">
-            <h2 id="noticias">Noticias y novedades del sector</h2>
-            <p>No hay novedades recientes.</p>
-        </section>
-
-      </aside>
-    </div>
-  </main>
-
-</body>
-</html>
+      <tbody>
+        <!-- FILA CON DATOS -->
+        <tr>
+          <td>1</td>
+          <td>Deterioro vial</td>
+          <td>
+            <time datetime="2026-01-05">Enero 6, 2026</time>
+          </td>
+          <td>
+            <span class="badge danger" aria-label="Gravedad moderada">
+              Grave
+            </span>
+          </td>
+          <td>
+            <span class="badge success" aria-label="Estado pendiente">
+              Éxito
+            </span>
+          </td>
+          <td>
+            <a href="#" aria-label="Ver adjunto del caso Deterioro vial">
+              Adjunto
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pintura desgastada</td>
+          <td>
+            <time datetime="2026-01-05">Enero 5, 2026</time>
+          </td>
+          <td>
+            <span class="badge danger" aria-label="Gravedad grave">Grave</span>
+          </td>
+          <td>
+            <span class="badge warning" aria-label="Estado pendiente">
+              Pendiente
+            </span>
+          </td>
+          <td>
+            <a href="#" aria-label="Ver adjunto del caso Deterioro vial">
+              Adjunto
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Asientos mal estado</td>
+          <td>
+            <time datetime="2026-01-05">Enero 5, 2026</time>
+          </td>
+          <td>
+            <span class="badge warning" aria-label="Gravedad moderada">
+              Moderado
+            </span>
+          </td>
+          <td>
+            <span class="badge success" aria-label="Estado pendiente">
+              Éxito
+            </span>
+          </td>
+          <td>
+            <a href="#" aria-label="Ver adjunto del caso Deterioro vial">
+              Adjunto
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

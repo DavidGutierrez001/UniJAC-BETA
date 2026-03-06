@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UniJAC | Dashboard</title>
+    <meta name="description" content="Dashboard" />
     <link rel="icon" href="/assets/img/icon.svg" />
     <link rel="stylesheet" href="/css/index.css" />
   </head>
 
   <body>
+    <div class="overlay"></div>
     <!-- DASHBOARD -->
     <div class="layout">
       <!-- Panel izquierdo -->
@@ -19,7 +21,7 @@
           aria-label="Secciones de reportes"
         >
           <!-- Botones de navegación del barrio -->
-          <a href="#/summary" class="btn-action">
+          <a href="#/inicio" class="btn-action">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -38,7 +40,7 @@
             <span>Inicio</span>
           </a>
 
-          <a href="#/events" class="btn-action">
+          <a href="#/eventos" class="btn-action">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -56,7 +58,7 @@
             </svg>
             <span>Eventos</span>
           </a>
-          <a href="#/infrastucture" class="btn-action beta">
+          <a href="#/infraestructura" class="btn-action">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -73,7 +75,7 @@
             <span>Infraestructura</span>
           </a>
 
-          <a href="#/loss" class="btn-action beta">
+          <a id="extraviosBtn" class="btn-action unavailable">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -90,7 +92,7 @@
             <span>Extravíos</span>
           </a>
 
-          <a href="#/critic" class="btn-action beta">
+          <a href="#/criticos" class="btn-action">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -153,7 +155,7 @@
           </svg>
           <span class="sr-only">Menu hamburguesa para moviles</span>
         </button>
-        <a href="#/summary">
+        <a href="#/inicio">
           <svg
             class="logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -394,15 +396,44 @@
           />
         </svg>
         <ol>
-          <li aria-current="page"><a href="#/summary">Dashboard</a></li>
-          <li aria-current="page"><a href="#/summary">El Minuto de Dios</a></li>
-          <li aria-current="page"><a href="#">Inicio</a></li>
+          <li aria-current="page"><a href="#/inicio">Dashboard</a></li>
+          <li aria-current="page"><a href="#/inicio">El Minuto de Dios</a></li>
+          <span id="locateHash">Inicio</span>
         </ol>
       </nav>
 
       <main class="content-main" id="contentMain"></main>
 
+      <div id="modalUnavailable" class="modal-unavailable">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          height="100"
+          viewBox="0 0 24 24"
+        >
+          <g
+            fill="none"
+            stroke="#858585"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+          >
+            <path
+              stroke-width="1"
+              d="M21.5 12.686v-1.372c0-1.635 0-2.453-.305-3.188c-.304-.735-.882-1.313-2.038-2.47l-.814-.813c-1.156-1.156-1.734-1.734-2.47-2.039c-.734-.304-1.552-.304-3.187-.304h-1.372c-1.635 0-2.453 0-3.188.304c-.735.305-1.313.883-2.47 2.04l-.813.813C3.687 6.813 3.11 7.39 2.804 8.127C2.5 8.86 2.5 9.678 2.5 11.313v1.372c0 1.635 0 2.453.304 3.188c.305.735.883 1.313 2.04 2.47l.813.813c1.156 1.156 1.734 1.734 2.47 2.038c.734.305 1.552.305 3.187.305h1.372c1.635 0 2.453 0 3.188-.305c.735-.304 1.313-.882 2.47-2.038l.813-.814c1.156-1.156 1.734-1.734 2.038-2.47c.305-.734.305-1.552.305-3.187M12 8v4.5"
+            />
+            <path stroke-width="1.8" d="M12 15.988v.01" />
+          </g>
+        </svg>
+        <h2>Lo sentimos !</h2>
+        <p>
+          Seguimos desarrollando para mejorar esta función.
+          <br />
+          Lamentamos las molestias.
+        </p>
+      </div>
     </div>
+
     <script src="/js/dashboard/dashboard.js" defer></script>
     <script src="/js/dashboard/routes.js" defer></script>
   </body>

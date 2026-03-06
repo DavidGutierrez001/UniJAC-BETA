@@ -1,5 +1,6 @@
 const main = document.querySelector("#contentMain");
 
+
 // RENDERIZAR VISTA
 async function loadView(path) {
     const res = await fetch(path);
@@ -7,6 +8,7 @@ async function loadView(path) {
     main.innerHTML = html || 'No disponible';
 }
 
+// Breadcrumb posicion hash actual
 function updateActiveButton() {
     const currentHash = window.location.hash || '#/summary';
     document.querySelectorAll(".btn-action").forEach(btn => {
@@ -18,23 +20,23 @@ function updateActiveButton() {
 }
 
 async function hashRoutes() {
+    const locateHash = document.querySelector("#locateHash")
+    const nameHash = window.location.hash.slice(2);
+    locateHash.textContent = nameHash.charAt(0).toUpperCase() + nameHash.slice(1);
     window.scrollTo(0, 0);
 
     const route = location.hash;
     switch (route) {
-        case "#/summary":
+        case "#/inicio":
             await loadView("/pages/dashboard/summary.html");
             break;
-        case "#/events":
+        case "#/eventos":
             await loadView("/pages/dashboard/events.html");
             break;
-        case "#/infrastucture":
+        case "#/infraestrutura":
             await loadView("/pages/dashboard/infrastructure.html");
             break;
-        case "#/loss":
-            await loadView("/pages/dashboard/loss.html");
-            break;
-        case "#/critic":
+        case "#/criticos":
             await loadView("/pages/dashboard/critic.html");
             break;
         default:

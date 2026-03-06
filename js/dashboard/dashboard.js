@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Temas
     const html = document.documentElement;
     const btnTheme = document.querySelector('#btnTheme');
+    const overlay = document.querySelector('.overlay');
 
     const currentTheme = localStorage.getItem('data-theme');
     html.setAttribute('data-theme', currentTheme);
@@ -61,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Abrir menú
     const openPanel = document.querySelector('#panelNav');
     const menuLeft = document.querySelector('#menuLeft');
-    openPanel?.addEventListener('click', () => {
-        menuLeft?.classList.toggle('is-open');
+    openPanel.addEventListener('click', () => {
+        menuLeft.classList.toggle('is-open');
     });
 
     // Abrir dropdown profile
@@ -108,11 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ✅ UN SOLO listener que LLAMA a cada función
+    //  Botones no disponibles + modal
+    const modalUnavailable = document.querySelector('#modalUnavailable');
+    const unavailable = document.querySelectorAll('.unavailable');
+
+    unavailable.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            modalUnavailable.classList.add('open');
+            overlay.classList.add('active');
+        });
+    });
+
+    function closeModalUnavailable(e) {
+        if (modalUnavailable && !modalUnavailable.contains(e.target)) {
+            modalUnavailable.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    }
+
     document.addEventListener('click', (e) => {
         closeMenuLeft(e);
         closeProfile(e);
-        closeToast(e);
+        closeToast(e)
+        closeModalUnavailable(e);
     });
 
     // Cerrar sesión
@@ -120,4 +140,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function logout() {
         window.location = "/";
     }
+
 });
