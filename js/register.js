@@ -49,7 +49,6 @@ export function inputValidator() {
     return isNombreValid && isApellidoValid && isLocalidadValid && isBarrioValid;
 }
 
-
 export function initRegister() {
     initLocalidades();
     initBarriosListener();
