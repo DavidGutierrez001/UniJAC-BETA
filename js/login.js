@@ -1,4 +1,6 @@
-function initLoginSupabase() {
+import { supabaseClient } from './supabase.js'
+
+export function initLoginSupabase() {
 
   const form = document.querySelector(".form-content form");
   if (!form) return;
@@ -35,7 +37,7 @@ function initLoginSupabase() {
 
       /* ===== REDIRECCION ===== */
 
-      location.hash = "#/neighborhoods";
+      window.location.href = "./pages/dashboard/layout.html#/summary";
 
     } catch (err) {
 
