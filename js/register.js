@@ -23,6 +23,7 @@ export function inputValidator() {
         localidad.parentNode.querySelector('.error-message').textContent = 'Selecciona una localidad.';
     } else {
         localidad.classList.remove('error');
+        localidad.parentNode.querySelector('.error-message').textContent = '';
     }
 
     if (!isBarrioValid) {
@@ -30,6 +31,7 @@ export function inputValidator() {
         barrio.parentNode.querySelector('.error-message').textContent = 'Selecciona un barrio.';
     } else {
         barrio.classList.remove('error');
+        barrio.parentNode.querySelector('.error-message').textContent = '';
     }
 
     if (!isNombreValid) {
@@ -37,6 +39,7 @@ export function inputValidator() {
         nombre.parentNode.querySelector('.error-message').textContent = 'Nombre inválido.';
     } else {
         nombre.classList.remove('error');
+        nombre.parentNode.querySelector('.error-message').textContent = '';
     }
 
     if (!isApellidoValid) {
@@ -44,6 +47,7 @@ export function inputValidator() {
         apellido.parentNode.querySelector('.error-message').textContent = 'Apellido inválido.';
     } else {
         apellido.classList.remove('error');
+        apellido.parentNode.querySelector('.error-message').textContent = '';
     }
 
     return isNombreValid && isApellidoValid && isLocalidadValid && isBarrioValid;
